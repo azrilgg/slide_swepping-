@@ -348,3 +348,22 @@ body {
     bottom: 30px;
   }
 }
+
+/* === PERBAIKAN POSISI TOMBOL DI HP === */
+@media (max-width: 768px) {
+  .item .content {
+    top: 45%; /* dari 50% → sedikit naik biar tombol gak ketutup */
+    transform: translateY(-45%);
+  }
+
+  .content button {
+    margin-top: 10px; /* beri jarak kecil dari deskripsi */
+  }
+}
+
+@media (max-width: 480px) {
+  .item .content {
+    top: 40%; /* naik sedikit lagi untuk layar kecil banget */
+    transform: translateY(-40%);
+  }
+}
