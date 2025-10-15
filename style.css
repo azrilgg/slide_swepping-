@@ -207,7 +207,8 @@ body {
     font-size: 0.8rem;
   }
 }
-/* ----------- FIX RESPONSIVE LAYOUT ---------- */
+
+/* === FINAL RESPONSIVE FIX === */
 @media (max-width: 900px) {
   .slide .item {
     width: 140px;
@@ -219,15 +220,15 @@ body {
   }
 
   .slide .item:nth-child(4) {
-    left: calc(65% + 150px);
+    left: calc(65% + 140px);
   }
 
   .slide .item:nth-child(5) {
-    left: calc(65% + 300px);
+    left: calc(65% + 280px);
   }
 
   .slide .item:nth-child(n + 6) {
-    left: calc(65% + 450px);
+    left: calc(65% + 420px);
   }
 
   .item .content {
@@ -238,6 +239,7 @@ body {
 
 @media (max-width: 600px) {
   .container {
+    width: 100%;
     aspect-ratio: 4 / 3;
   }
 
@@ -251,11 +253,15 @@ body {
   }
 
   .slide .item:nth-child(4) {
-    left: calc(70% + 120px);
+    left: calc(70% + 110px);
   }
 
   .slide .item:nth-child(5) {
-    left: calc(70% + 240px);
+    left: calc(70% + 220px);
+  }
+
+  .slide .item:nth-child(n + 6) {
+    left: calc(70% + 330px);
   }
 
   .item .content {
@@ -264,11 +270,16 @@ body {
   }
 
   .content .name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .content .des {
     font-size: 0.85rem;
+  }
+
+  .content button {
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 }
 
@@ -283,15 +294,27 @@ body {
   }
 
   .slide .item:nth-child(4) {
-    left: calc(75% + 100px);
+    left: calc(75% + 90px);
   }
 
   .slide .item:nth-child(5) {
-    left: calc(75% + 200px);
+    left: calc(75% + 180px);
+  }
+
+  .slide .item:nth-child(n + 6) {
+    left: calc(75% + 270px);
+  }
+
+  .content .name {
+    font-size: 1.1rem;
+  }
+
+  .content .des {
+    font-size: 0.75rem;
   }
 
   .content button {
-    padding: 8px 14px;
-    font-size: 0.8rem;
+    padding: 7px 12px;
+    font-size: 0.7rem;
   }
 }
