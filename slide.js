@@ -1,12 +1,12 @@
 ( () => {
 
   const slideImages = [
-    {img: 'assets/images/slide-1.jpg', title: 'Ea id minim', description: 'Consectetur enim culpa exercitation excepteur elit dolore aliquip dolor deserunt duis ea.'},
-    {img: 'assets/images/slide-2.jpg', title: 'Nisi sint qui', description: 'Irure elit ex deserunt cupidatat enim.'},
-    {img: 'assets/images/slide-3.jpg', title: 'Mollit non', description: 'Irure incididunt voluptate veniam aliquip aliqua voluptate duis est ullamco labore.'},
-    {img: 'assets/images/slide-4.jpg', title: 'Id incididunt', description: 'Veniam laborum fugiat reprehenderit magna ut cupidatat aute do.'},
-    {img: 'assets/images/slide-5.jpg', title: 'Commodo ad ', description: 'Velit tempor amet adipisicing quis voluptate mollit voluptate fugiat irure incididunt ipsum.'},
-    {img: 'assets/images/slide-6.jpg', title: 'Elit exercitation', description: 'Tempor minim officia est eiusmod ut amet incididunt minim pariatur aliquip occaecat.'},
+    {img: 'images/slide-1.jpg', title: 'Ea id minim', description: 'Consectetur enim culpa exercitation excepteur elit dolore aliquip dolor deserunt duis ea.'},
+    {img: 'images/slide-2.jpg', title: 'Nisi sint qui', description: 'Irure elit ex deserunt cupidatat enim.'},
+    {img: 'images/slide-3.jpg', title: 'Mollit non', description: 'Irure incididunt voluptate veniam aliquip aliqua voluptate duis est ullamco labore.'},
+    {img: 'images/slide-4.jpg', title: 'Id incididunt', description: 'Veniam laborum fugiat reprehenderit magna ut cupidatat aute do.'},
+    {img: 'images/slide-5.jpg', title: 'Commodo ad ', description: 'Velit tempor amet adipisicing quis voluptate mollit voluptate fugiat irure incididunt ipsum.'},
+    {img: 'images/slide-6.jpg', title: 'Elit exercitation', description: 'Tempor minim officia est eiusmod ut amet incididunt minim pariatur aliquip occaecat.'},
   ];
 
   const createHtmlStructure = ( sliderSelector, images ) => {
