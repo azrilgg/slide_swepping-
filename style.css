@@ -407,3 +407,49 @@ body {
     bottom: 25px;
   }
 }
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1300px; /* biar pas di monitor besar */
+    aspect-ratio: 16 / 9;
+  }
+
+  .slide .item {
+    width: 200px;
+    height: 280px;
+  }
+
+  .slide .item:nth-child(3) {
+    left: 60%;
+  }
+
+  .slide .item:nth-child(4) {
+    left: calc(60% + 220px);
+  }
+
+  .slide .item:nth-child(5) {
+    left: calc(60% + 440px);
+  }
+
+  .slide .item:nth-child(n + 6) {
+    left: calc(60% + 660px);
+    opacity: 0;
+  }
+
+  .item .content {
+    left: 12%;
+    max-width: 380px;
+  }
+
+  .content .name {
+    font-size: 2.2rem;
+  }
+
+  .content .des {
+    font-size: 1rem;
+  }
+
+  .button {
+    bottom: 25px;
+  }
+}
