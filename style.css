@@ -86,17 +86,20 @@ body {
 }
 
 .content .name {
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 800; /* lebih tebal */
   color: #F4EDE1;
   text-shadow: 0 0 10px rgba(0,0,0,0.6);
   animation: animate 1s ease-in-out 1 forwards;
 }
 
 .content .des {
+  font-family: 'Poppins', sans-serif;
   margin-top: 10px;
   margin-bottom: 20px;
+  font-weight: 300; /* lebih tipis elegan */
   color: #E8DFD3;
   text-shadow: 0 0 8px rgba(0,0,0,0.5);
   animation: animate 1s ease-in-out 0.3s 1 forwards;
