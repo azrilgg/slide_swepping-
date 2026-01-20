@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Globe Express | Travel</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <!-- Inline SVG for Globe -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M2 12h20"></path>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      GLOBE EXPRESS
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#holidays">Holidays</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#flights">Flights</a>
+      <a href="#offers">Offers</a>
+      <a href="#contacts">Contacts</a>
+    </div>
+    <div class="nav-icons">
+      <button class="icon-btn btn-search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+      <button class="icon-btn btn-user">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </button>
+    </div>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay">
+      <button class="close-search">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search destinations, holidays...">
+        <div class="search-results"></div>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div class="login-modal-overlay">
+      <div class="login-modal glass-form">
+        <button class="close-login">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <h3>Welcome Back</h3>
+        <p>Login to access your personalized travel plans.</p>
+
+        <form class="login-form">
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="example@mail.com">
+          </div>
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••">
+          </div>
+          <button type="button" class="cta-btn full-width btn-submit-login">Login</button>
+          <div class="divider"><span>OR</span></div>
+          <button type="button" class="cta-btn full-width outline-btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <div class="menu-toggle">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu-overlay">
+    <div class="close-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </div>
+    <a href="#home">Home</a>
+    <a href="#holidays">Holidays</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#flights">Flights</a>
+    <a href="#offers">Offers</a>
+    <a href="#contacts">Contacts</a>
+  </div>
+
+  <!-- MAIN WRAPPER -->
+  <main>
+
+    <!-- SECTION 1: HOME (CAROUSEL) -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="slide">
+
+          <!-- SLIDE 1 -->
+          <div class="item" style="background-image: url(images/slide-1.jpg);">
+            <div class="content">
+              <div class="subtitle">Switzerland Alps</div>
+              <div class="name">SAINT ANTÖNIEN</div>
+              <div class="des">
+                Maecenas malesuada elit augue accumsan tincidunt. Velt et porttitor scelerisque torquent.
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 - JAPAN -->
+          <div class="item" style="background-image: url(images/slide-2.jpg);">
+            <div class="content">
+              <div class="subtitle">Norway Alps</div>
+              <div class="name">NAGANO PREFECTURE</div>
+              <div class="des">
+                Experience current of culture and snow monkeys in the heart of Norway's mountains.
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3 - Iceland -->
+          <div class="item" style="background-image: url(images/slide-3.jpg);">
+            <div class="content">
+              <div class="subtitle">Iceland</div>
+              <div class="name">Nature GOAT</div>
+              <div class="des">
+                Endless golden dunes and star-filled skies await in the vast Sahara desert.
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 4 - YOSEMITE -->
+          <div class="item" style="background-image: url(images/slide-4.jpg);">
+            <div class="content">
+              <div class="subtitle">Sierra Nevada - USA</div>
+              <div class="name">YOSEMITE NATIONAL PARK</div>
+              <div class="des">
+                Iconic granite cliffs, waterfalls, and giant sequoias in California's mountains.
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 5 - SPAIN -->
+          <div class="item" style="background-image: url(images/slide-5.jpg);">
+            <div class="content">
+              <div class="subtitle">Netherlands</div>
+              <div class="name">The Low Lands</div>
+              <div class="des">
+                The ultimate destination for windsports and endless sandy beaches.
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 6 - NORWAY -->
+          <div class="item"
+            style="background-image: url(https://i.pinimg.com/736x/fb/c8/d4/fbc8d49e9d2a455c007e431e14ebcceb.jpg);">
+            <div class="content">
+              <div class="subtitle">South Korea</div>
+              <div class="name">The Land of the Morning Calm</div>
+              <div class="des">
+                Dramatis mountains and open sea, sheltered bays, beaches and untouched lands.
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 7 - INDONESIA -->
+          <div class="item" style="background-image: url(images/slide-7.jpg);">
+            <div class="content">
+              <div class="subtitle">Indonesia</div>
+              <div class="name">BALI ISLANDS</div>
+              <div class="des">
+                Beautiful islands and combination nature clean
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 8 - -->
+          <div class="item" style="background-image: url(images/slide-8.jpg);">
+            <div class="content">
+              <div class="subtitle">JAPAN</div>
+              <div class="name">CLEAN COUNTRY</div>
+              <div class="des">
+                Beautiful COUNTRY Aesthetic vibes
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+           <!-- SLIDE 9 - -->
+          <div class="item" style="background-image: url(https://i.pinimg.com/1200x/28/ee/85/28ee855a9fc685705514d5511249e333.jpg);">
+            <div class="content">
+              <div class="subtitle">SPAIN</div>
+              <div class="name">Matador Country</div>
+              <div class="des">
+                Beautiful COUNTRY Aesthetic vibes
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 10 - -->
+          <div class="item" style="background-image: url(https://i.pinimg.com/1200x/d7/9a/36/d79a36c81071725d98748cdb31e41e15.jpg);">
+            <div class="content">
+              <div class="subtitle">FRANCE</div>
+              <div class="name">La Ville Lumière</div>
+              <div class="des">
+                Beautiful COUNTRY Aesthetic vibes
+              </div>
+              <div class="btn-group">
+                <button class="play-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+                <button class="discover-btn">Discover Location</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CONTROLS & DECOR -->
+        <div class="bottom-interface">
+          <div class="buttons">
+            <!-- SVG LEFT -->
+            <button class="prev">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <!-- SVG RIGHT -->
+            <button class="next">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="slide-counter">
+            <span id="current">01</span>
+            <span class="bar"></span>
+            <span id="total">06</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: HOLIDAYS -->
+    <section id="holidays" class="content-section">
+      <div class="section-content">
+        <h2>Dream Holidays</h2>
+        <div class="card-grid">
+          <!-- Luxury Resorts -->
+          <div class="card holiday-card"
+            style="background-image: url('https://i.pinimg.com/736x/8b/b2/eb/8bb2eb9d03065a35b25f6974bc95292e.jpg');">
+            <div class="card-overlay">
+              <h3>Luxury Resorts</h3>
+              <p>Private islands and 5-star service.</p>
+              <a href="#" class="explore-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg></a>
+            </div>
+          </div>
+          <!-- Adventure -->
+          <div class="card holiday-card"
+            style="background-image: url('https://i.pinimg.com/1200x/35/c6/35/35c635bca65c43069ac1b54f4670f308.jpg');">
+            <div class="card-overlay">
+              <h3>Adventure</h3>
+              <p>Trekking, Safaris, and Expeditions.</p>
+              <a href="#" class="explore-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg></a>
+            </div>
+          </div>
+          <!-- Cultural -->
+          <div class="card holiday-card"
+            style="background-image: url('https://i.pinimg.com/736x/01/d0/11/01d011ffc90143d04f5832db407bb61f.jpg');">
+            <div class="card-overlay">
+              <h3>Culture</h3>
+              <p>Immerse in history and traditions.</p>
+              <a href="#" class="explore-link">Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DESTINATIONS -->
+    <section id="destinations" class="content-section">
+      <div class="section-content">
+        <h2>Top Destination</h2>
+        <div class="marquee-container">
+          <!-- Row 1: Left Moving -->
+          <div class="marquee-wrapper">
+            <div class="marquee-track left-track" id="track-1">
+              <!-- Content injected by JS -->
+            </div>
+          </div>
+
+          <!-- Row 2: Right Moving -->
+          <div class="marquee-wrapper">
+            <div class="marquee-track right-track" id="track-2">
+              <!-- Content injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FLIGHTS -->
+    <section id="flights" class="content-section">
+      <div class="split-layout">
+        <div class="split-text">
+          <h2>First Class<br>Experience</h2>
+          <p>Fly with superior comfort and exclusive service. Our partner airlines ensure you arrive refreshed and
+            ready.</p>
+          <ul class="features-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg> Priority Boarding</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg> Luxury Lounges</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg> 5-Star Dining</li>
+          </ul>
+        </div>
+        <div class="split-widget">
+          <div class="flight-widget">
+            <h3>Book Your Flight</h3>
+            <div class="input-group">
+              <label>From</label>
+              <input type="text" placeholder="New York (JFK)">
+            </div>
+            <div class="input-group">
+              <label>To</label>
+              <input type="text" placeholder="London (LHR)">
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label>Date</label>
+                <input type="date">
+              </div>
+              <div class="input-group">
+                <label>Class</label>
+                <select>
+                  <option>Economy</option>
+                  <option>Business</option>
+                  <option>First</option>
+                </select>
+              </div>
+            </div>
+            <button class="cta-btn full-width">Search Flights</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: OFFERS -->
+    <section id="offers" class="content-section">
+      <div class="section-content">
+        <h2>Special Offers</h2>
+        <div class="offer-banner">
+          <div class="offer-bg" style="background-image: url('images/slide-5.jpg');"></div>
+          <div class="offer-content">
+            <span>50% OFF</span>
+            <h3>Summer Escape in Spain</h3>
+            <p>Valid until August 31st. terms apply.</p>
+            <button class="cta-btn small">Claim Offer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACTS -->
+    <section id="contacts" class="content-section">
+      <div class="split-layout">
+        <div class="split-text">
+          <h2>Contact Us</h2>
+          <p>Ready to start your journey? Our team is available 24/7 to assist you with your personalized travel plans.
+          </p>
+          <div class="contact-info">
+            <div class="info-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+1 234 567 890</span>
+            </div>
+            <div class="info-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>concierge@globeexpress.com</span>
+            </div>
+            <div class="info-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>1525 Broadway, New York, NY</span>
+            </div>
+          </div>
+        </div>
+        <div class="split-widget">
+          <form class="contact-form glass-form">
+            <h3>Send Message</h3>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Your Message" rows="4"></textarea>
+            <button type="button" class="cta-btn full-width">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- DISCOVERY MODAL -->
+  <div class="discovery-modal">
+    <button class="close-modal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-subtitle">Discover</span>
+        <h2 class="modal-title">LOCATION NAME</h2>
+        <div class="modal-line"></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-info">
+          <h3>About The Place</h3>
+          <p class="modal-desc">
+            Detailed description goes here. This will be populated dynamically by JavaScript.
+          </p>
+
+          <div class="modal-facts">
+            <!-- Dynamic Facts -->
+          </div>
+        </div>
+
+        <div class="modal-gallery">
+          <!-- Dynamic Images will be injected here -->
+          <div class="gallery-item" style="background-image: url('images/slide-1.jpg')"></div>
+          <div class="gallery-item" style="background-image: url('images/slide-2.jpg')"></div>
+          <div class="gallery-item" style="background-image: url('images/slide-3.jpg')"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal-overlay">
+    <button class="close-video">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="video-container">
+      <iframe id="youtube-frame" src="" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
