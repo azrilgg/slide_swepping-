@@ -158,7 +158,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **Riel**
 - *Front-End Developer & UI Enthusiast*
-- [GitHub Profile](https://github.com/your-username)
+- [GitHub Profile](https://github.com/azrilgg)
 - [Live Demo](https://riel-superslide.vercel.app) (Example Link)
 
 ---
